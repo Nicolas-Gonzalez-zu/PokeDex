@@ -3,6 +3,7 @@ const webpackNodeExternals = require('webpack-node-externals');
 const { merge } = require('webpack-merge');
 const sharedConfig = require('./webpack.shared.config.js');
 
+
 let config = {
     target: 'node', 
 
@@ -32,6 +33,7 @@ let config = {
             ]
         }],
     },
+
 };
 
 module.exports = merge(sharedConfig, config); 
