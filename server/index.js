@@ -6,9 +6,13 @@ import App from '../client/components/App';
 const app = express();
 const port = 3000;
 
+const { TestContext } = require("../client/context/context");
+
 app.get('/', (req, res) => {
-    const jsx = ReactDOMServer.renderToString( 
-        <App />
+    const jsx = ReactDOMServer.renderToString(
+        <TestContext.Provider value={{ hello: "Server context initialize" }}>
+            <App />
+        </TestContext.Provider> 
     ); 
 
     const clientBundleScript = `<script src="http://localhost:8080/scripts/bundle.js"></script>`; 
@@ -20,7 +24,7 @@ app.get('/', (req, res) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>My SSR App</title>
+                <title>Pokedex</title>
                 ${clientBundleStyle} 
             </head>
             <body>

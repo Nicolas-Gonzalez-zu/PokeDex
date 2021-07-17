@@ -5,6 +5,6 @@ module.exports = function(api) {
              '@babel/preset-env', 
              '@babel/preset-react', 
          ],
-         plugins: [],
+         plugins: ["@babel/plugin-transform-runtime"],
      };
  };
