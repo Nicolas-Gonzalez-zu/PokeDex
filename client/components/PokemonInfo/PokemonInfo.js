@@ -36,7 +36,7 @@ export default function PokemonInfo(){
                         <div className={style.NameCnt}>
                             <p className={style.Name}><b>{name}</b><span>{id}</span></p>
                             <div>
-                                {pokemon.id > 1 && <Link className={style.Link} to={`/pokemon/${pokemon.id - 1}`}>{changeId(pokemon.id - 1)}</Link>}
+                                {pokemons[0].id <= (pokemon.id - 1) && <Link className={style.Link} to={`/pokemon/${pokemon.id - 1}`}>{changeId(pokemon.id - 1)}</Link>}
                                 <button type="button" onClick={handleClick} className={style.Link}>Close</button>
                                 {pokemons[pokemons.length-1].id >= (pokemon.id + 1) && <Link className={style.Link} to={`/pokemon/${pokemon.id + 1}`}>{changeId(pokemon.id + 1)}</Link>}
                             </div>

@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Context from "../../context/context";
 
 //Import styles
-import "./searchbar.less";
+import style from "./style";
 
 export default function SearchBar() {
   const [name, setName] = useState("");
@@ -31,19 +31,20 @@ export default function SearchBar() {
 
   return (
     <>
-      {true && <button type="button" onClick={handlePaginationPrev}>&#60;</button>}
+      <button className={style.Button} type="button" onClick={handlePaginationPrev}>&#60;</button>
       <div style={{margin:"2em"}}>
         <input
+        className={style.Input}
           type="text"
           placeholder="Search..."
           onChange={handleChange}
           value={name}
         />
-        <button type="button" onClick={onClick}>
+        <button className={style.Button} type="button" onClick={onClick}>
           Add
         </button>
       </div>
-      {true && <button type="button" onClick={handlePaginationNext}>&#62;</button>}
+      <button className={style.Button} type="button" onClick={handlePaginationNext}>&#62;</button>
     </>
   );
 }
