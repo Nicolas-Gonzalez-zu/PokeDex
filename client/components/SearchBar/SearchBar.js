@@ -25,8 +25,17 @@ export default function SearchBar() {
   function handlePaginationNext(){
     context.getPokemonsPagination(context?.pokemons[0]?.id + 19)
   }
+
   useEffect(()=>{
-    onClick()
+    let pokemons = localStorage.getItem('pokemons');
+    
+ 
+    if(pokemons){
+      context.loadPokemons(JSON.parse(pokemons))
+    } else {
+      onClick()
+    }
+    
   },[])
 
   return (
@@ -34,7 +43,7 @@ export default function SearchBar() {
       <button className={style.Button} type="button" onClick={handlePaginationPrev}>&#60;</button>
       <div style={{margin:"2em"}}>
         <input
-        className={style.Input}
+          className={style.Input}
           type="text"
           placeholder="Search..."
           onChange={handleChange}

@@ -15,7 +15,6 @@ import {capitalizeFirstLetter, changeId} from '../../helpers/functions'
 export default function Cards() {
   const context = useContext(Context);
   let pokemons = context.pokemons;
-  console.log(context);
 
   return (
     <div className={style.Layout}>
