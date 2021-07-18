@@ -1,0 +1,196 @@
+.Layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(0.5em);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+
+}
+
+.Card{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+
+    position: relative;
+
+    padding: 0.5em;
+
+    display: flex;
+
+    @media(max-width:525px) {
+        flex-direction:column;
+    }
+}
+
+.ImgCnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-height:15em;
+        width: auto;
+        
+    }
+}
+
+.InfoCnt{
+    display: flex;
+    flex-direction: column;
+}
+
+.NameCnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    flex: 2;
+
+    div{
+        display: flex;
+        
+    }
+
+}
+
+.Link{
+margin:1em;
+padding: 0.5em;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 156px;
+
+}
+
+.Name{
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+}
+
+.InfoInnerCnt {
+	display: flex;
+	flex-wrap: wrap;
+    
+    flex: 10;
+	div {
+        margin: 2em;
+
+		display: flex;
+		flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media(max-width:525px) {
+            margin: 5px;
+        }
+	}
+    @media(max-width:525px) {
+        justify-content: space-around;
+    }
+}
+
+.Type{
+    border-radius: 5px;
+    margin: 1px;
+    padding: 2px;
+
+}
+.Type[target=Grass]{
+    background: #72c235;
+    color: white;
+}
+
+.Type[target=Poison]{
+    background: #8e4691;
+    color: white;
+}
+
+.Type[target=Bug]{
+    background: #abbb1f;
+    color: white;
+}
+
+.Type[target=Dark]{
+    background: #4f3a2d;
+    color: white;
+}
+
+.Type[target=Dragon]{
+    background: #765ee1;
+    color: white;
+}
+
+.Type[target=Electric]{
+    background: #f9ba19;
+    color: black;
+}
+
+.Type[target=Fairy]{
+    background: #eea9f0;
+    color: white;
+}
+
+.Type[target=Fighting]{
+    background: #7e311e;
+    color: white;
+}
+
+.Type[target=Fire]{
+    background: #e43b09;
+    color: white;
+}
+
+.Type[target=Flying]{
+    background: #909ef0;
+    color: white;
+}
+
+.Type[target=Ghost]{
+    background: #5e5fae;
+    color: white;
+}
+
+.Type[target=Ground]{
+    background: #d4b55c;
+    color: black;
+}
+
+.Type[target=Ice]{
+    background: #6dd3f2;
+    color: white;
+}
+
+.Type[target=Normal]{
+    background: #c4c1b9;
+    color: black;
+}
+
+.Type[target=Psychic]{
+    background: #e64579;
+    color: white;
+}
+
+.Type[target=Rock]{
+    background: #ad954b;
+    color: white;
+}
+
+.Type[target=Water]{
+    background: #2e8eee;
+    color: white;
+}
+
+.Type[target=Steel]{
+    background: #a4a3b3;
+    color: black;
+}

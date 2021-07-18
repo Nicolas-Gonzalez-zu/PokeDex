@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
+//import context
 import Context from "../../context/context";
 
 //Import styles

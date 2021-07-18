@@ -1,6 +1,6 @@
 .Layout {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   
     display: flex;
     flex-direction: column;
@@ -10,15 +10,59 @@
   .Navbar {
     flex: 2;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1em;
   
-    background-color: red;
     width: 100%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   }
   
   .Cards {
-    flex: 11;
+    flex: 9;
     display: flex;
     width: 75%;
-  
-    background-color: blue;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+ 
   }
+
+
+  .Space{
+    flex: 1;
+  }
+
+  *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+button {
+  border: inherit;
+}
+button:focus {
+  outline: none;
+}

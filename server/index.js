@@ -3,16 +3,21 @@ import ReactDOMServer from 'react-dom/server';
 import express from 'express';
 import App from '../client/components/App';
 
+import { StaticRouter } from 'react-router-dom';
+
 const app = express();
 const port = 3000;
 
 const { TestContext } = require("../client/context/context");
 
 app.get('/', (req, res) => {
+    const context = {};
     const jsx = ReactDOMServer.renderToString(
-        <TestContext.Provider value={{ hello: "Server context initialize" }}>
-            <App />
-        </TestContext.Provider> 
+        <StaticRouter location={req.url} context={context}>
+            <TestContext.Provider value={{ hello: "Server context initialize" }}>
+                <App />
+            </TestContext.Provider>
+        </StaticRouter>
     ); 
 
     const clientBundleScript = `<script src="http://localhost:8080/scripts/bundle.js"></script>`; 
