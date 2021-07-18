@@ -12,6 +12,21 @@
 
 }
 
+.Loading{
+  position: absolute;
+  
+  background-image: url("https://i.imgur.com/ODFrgca.png");
+  background-size: cover;
+  background-size: contain;
+
+  animation:spin 4s linear infinite;
+
+  width: 10em;
+  height: 10em;
+}
+
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .LayoutCard{
   display: flex;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 //Import react-router
 import { Route, Switch, NavLink } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 //Import context
 import StateProvider from "../../context/state";
 import { TestContext } from "../../context/context";
+import Context from "../../context/context";
 
 //Import components
 import SearchBar from "../SearchBar/SearchBar";
@@ -17,9 +18,9 @@ import style from "./style";
 
 
 function App() {
-  const context = useContext(TestContext);
-  console.log("render app");
-  console.log(context);
+  const ServerContext = useContext(TestContext);
+  console.log(ServerContext);
+
   return (
     <>
       <StateProvider>
