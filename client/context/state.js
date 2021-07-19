@@ -17,7 +17,6 @@ const StateProvider = (props) => {
     ).then(async (r)=>{  
         let array2 = [];
         for (const element of r.data) {
-          console.log(element);
           await axios
             .get(`http://localhost:3001/pokemons/pokemon?url=${element.url}`)
             .then((r) => {
@@ -58,7 +57,6 @@ const StateProvider = (props) => {
     ).then(async (r)=>{
       if (!r.data.results) {
         const array = [];
-        console.log(r.data);
         array.push(r.data);
         setLoading(false)
         dispatch({
